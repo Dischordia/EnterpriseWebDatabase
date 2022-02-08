@@ -6,11 +6,22 @@ const PORT = process.env.PORT || 8080;
 // set the port based on environment *more on environments later)
 var port = PORT;
 
+	
+
+
+
+
 // send our index.html file to the user of our the home page
-app.get('/', function(req,res){
+app.route('/index')
+	.get(function(req,res){
+	// Connect Node back end to accept input from front end. 
+	var output = 'processing the login form... '
+	var input1 = req.query.input1;
+	var input2 = req.query.input2;
+	console.log('The params: ' + req.query.input1 + " " + req.query.input2);
+	
 	res.sendFile(__dirname + '/index.html');
 });
-
 
 
 // ########## ADMIN SECTION ##########

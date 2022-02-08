@@ -13,7 +13,7 @@ var port = PORT;
 
 // send our index.html file to the user of our the home page
 app.route('/index')
-	.get(function(req,res){
+	.get('/', function(req,res){
 	// Connect Node back end to accept input from front end. 
 	var output = 'processing the login form... '
 	var input1 = req.query.input1;

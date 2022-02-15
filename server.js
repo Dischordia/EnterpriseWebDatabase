@@ -2,7 +2,7 @@
 var express = require('express')
 var app = express();
 const PORT = process.env.PORT || 8080;
-const DBURI = process.env.DBURI || "mongodb://127.0.0.1:27017"
+const DBURI = process.env.DBURI
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = DBURI;

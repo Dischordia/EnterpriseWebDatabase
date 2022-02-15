@@ -23,7 +23,7 @@ app.route('/login')
 
      MongoClient.connect(uri, function (err, db) {
             if(err) throw err;
-            console.log('Start the database stuff');
+            console.log('Start the database stuff ' + uri);
             //Write databse Insert/Update/Query code here..
             var dbo = db.db("mydb");
             var myobj = { firstInput: input1, secondInput: input2 };
